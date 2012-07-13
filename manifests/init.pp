@@ -2,7 +2,7 @@ class jenkins_sphinx($version = "installed", $scripts_dir = '/opt') {
 
     include jenkins
 
-    $jenkins_user = $jenkins::tomcat_package
+    $jenkins_user = "$jenkins::tomcat_package"
 
     package { 'sphinxsearch':
         ensure => "$version"
